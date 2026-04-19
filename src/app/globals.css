@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #FFF7ED;
+  --bg-card: #FFFFFF;
+  --bg-soft: #FFEDD5;
+  --border-main: #fed7aa;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  color-scheme: light;
+}
+
+.dark {
+  --bg-main: #0f172a;
+  --bg-card: #1e293b;
+  --bg-soft: #1e293b;
+  --border-main: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  color-scheme: dark;
+}
+
+html, body { height: 100%; }
+body {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  transition: background 0.2s, color 0.2s;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border shadow-sm transition;
+    background: var(--bg-card);
+    border-color: var(--border-main);
+  }
+  .card-hover { @apply hover:shadow-md; }
+  .label { @apply text-xs font-semibold uppercase tracking-wide; color: var(--text-secondary); }
+  .input-base {
+    @apply w-full rounded-lg border px-3 py-2.5 text-sm transition;
+    background: var(--bg-card);
+    border-color: var(--border-main);
+    color: var(--text-primary);
+  }
+  .input-base:focus {
+    @apply outline-none ring-2 ring-brand-500 border-transparent;
+  }
+  .gradient-brand {
+    background: linear-gradient(135deg, #FB923C 0%, #EA580C 50%, #C2410C 100%);
+  }
+  .gradient-brand-soft {
+    background: var(--bg-soft);
+  }
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #FDBA74; border-radius: 3px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fadeInUp 0.3s ease-out; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+.animate-spin { animation: spin 1s linear infinite; }
+
+/* Range slider styling */
+input[type="range"] {
+  @apply w-full h-2 rounded-lg appearance-none cursor-pointer;
+  background: linear-gradient(to right, #EA580C, #FB923C);
+}
+input[type="range"]::-webkit-slider-thumb {
+  @apply w-5 h-5 rounded-full appearance-none;
+  background: #EA580C;
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+    <linearGradient id="innerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDBA74"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer shield -->
+  <path d="M100 10 L180 40 L180 110 C180 150 140 180 100 190 C60 180 20 150 20 110 L20 40 Z"
+        fill="url(#orangeGrad)" stroke="#7C2D12" stroke-width="3"/>
+
+  <!-- Inner white shield -->
+  <path d="M100 25 L165 50 L165 108 C165 140 135 165 100 175 C65 165 35 140 35 108 L35 50 Z"
+        fill="#FFFFFF"/>
+
+  <!-- Football/soccer ball -->
+  <circle cx="100" cy="95" r="32" fill="url(#innerGrad)" stroke="#7C2D12" stroke-width="2"/>
+  <polygon points="100,75 115,88 109,107 91,107 85,88" fill="#7C2D12"/>
+  <line x1="100" y1="75" x2="100" y2="63" stroke="#7C2D12" stroke-width="2"/>
+  <line x1="115" y1="88" x2="126" y2="83" stroke="#7C2D12" stroke-width="2"/>
+  <line x1="109" y1="107" x2="118" y2="119" stroke="#7C2D12" stroke-width="2"/>
+  <line x1="91" y1="107" x2="82" y2="119" stroke="#7C2D12" stroke-width="2"/>
+  <line x1="85" y1="88" x2="74" y2="83" stroke="#7C2D12" stroke-width="2"/>
+
+  <!-- Text AJMAN -->
+  <text x="100" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="900"
+        text-anchor="middle" fill="#7C2D12" letter-spacing="2">AJMAN</text>
+  <text x="100" y="166" font-family="Arial, sans-serif" font-size="10" font-weight="600"
+        text-anchor="middle" fill="#C2410C" letter-spacing="3">CLUB · UAE</text>
+</svg>

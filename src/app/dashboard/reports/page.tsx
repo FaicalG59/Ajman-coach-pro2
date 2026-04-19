@@ -28,7 +28,7 @@ export default async function ReportsIndex() {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 text-white flex items-center justify-center shadow-glow-orange group-hover:scale-110 transition"><FileText size={20} /></div>
                 <div className="flex-1">
                   <div className="font-bold text-slate-900 group-hover:text-brand-700 transition">{p.first_name} {p.last_name}</div>
-                  <div className="text-xs text-slate-500">{p.team} · {p.position}</div>
+                  <div className="text-xs text-slate-500">{p.age_group || 'No group'} · {p.position}</div>
                 </div>
                 <ChevronRight size={18} className="text-brand-500 group-hover:translate-x-1 transition" />
               </div>
